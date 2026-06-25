@@ -8,6 +8,17 @@ figure — over a data model shaped on Glean's real Indexing & Insights API sche
 > API contracts, and all data access goes through a `GleanClient` interface — so it's
 > "a token away" from running against a live tenant.
 
+## Screenshots
+
+**Overview — at-a-glance health verdict and business value, with Platform Health detail**
+![Overview: platform health and business value](screenshots/01-overview-health.png)
+
+**Adoption — license penetration and stickiness by department**
+![Adoption by department](screenshots/02-adoption.png)
+
+**Permission inspector — pick a user, see exactly which documents they can and can't access**
+![Permission inspector](screenshots/03-permission-inspector.png)
+
 ## What it shows
 - **Platform health** — datasource sync freshness, SSO posture, and governance (over-sharing) findings, rolled up worst-severity-wins.
 - **Adoption** — license penetration *and* Glean's own adoption rate (Glean MAU / total MAU), plus stickiness, per department; flags stalled teams.
