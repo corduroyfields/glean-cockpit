@@ -1,0 +1,79 @@
+{
+  "customer": {
+    "name": "Acme Corp",
+    "plan": "Enterprise",
+    "seats_licensed": 1200,
+    "go_live_date": "2026-05-01"
+  },
+  "datasources": [
+    { "id": "slack",      "display_name": "Slack",         "category": "MESSAGING",        "last_sync_hours_ago": 1,  "document_count": 482000 },
+    { "id": "gdrive",     "display_name": "Google Drive",  "category": "DOCUMENT_STORE",   "last_sync_hours_ago": 2,  "document_count": 915000 },
+    { "id": "confluence", "display_name": "Confluence",    "category": "KNOWLEDGE_HUB",    "last_sync_hours_ago": 14, "document_count": 61000 },
+    { "id": "jira",       "display_name": "Jira",          "category": "TICKETING",        "last_sync_hours_ago": 73, "document_count": 28000 },
+    { "id": "github",     "display_name": "GitHub",        "category": "CODE_REPOSITORY",  "last_sync_hours_ago": 3,  "document_count": 134000 }
+  ],
+  "documents": [
+    {
+      "id": "doc-001", "title": "Q3 Sales Pipeline", "datasource": "gdrive",
+      "permissions": {
+        "allow_anonymous_access": false, "allow_all_datasource_users_access": false,
+        "allowed_users": [], "allowed_groups": ["Sales"]
+      }
+    },
+    {
+      "id": "doc-002", "title": "Master Services Agreement (Draft)", "datasource": "gdrive",
+      "permissions": {
+        "allow_anonymous_access": false, "allow_all_datasource_users_access": false,
+        "allowed_users": [], "allowed_groups": ["Legal"]
+      }
+    },
+    {
+      "id": "doc-003", "title": "Employee Handbook 2026", "datasource": "confluence",
+      "permissions": {
+        "allow_anonymous_access": true, "allow_all_datasource_users_access": false,
+        "allowed_users": [], "allowed_groups": []
+      }
+    },
+    {
+      "id": "doc-004", "title": "Incident Postmortem: API Outage", "datasource": "jira",
+      "permissions": {
+        "allow_anonymous_access": false, "allow_all_datasource_users_access": false,
+        "allowed_users": ["support-lead@acme.com"], "allowed_groups": ["Engineering"]
+      }
+    },
+    {
+      "id": "doc-005", "title": "Q2 Board Deck", "datasource": "gdrive",
+      "permissions": {
+        "allow_anonymous_access": false, "allow_all_datasource_users_access": false,
+        "allowed_users": ["ceo@acme.com", "cfo@acme.com"], "allowed_groups": []
+      }
+    }
+  ],
+  "users": [
+    { "email": "dana@acme.com",         "name": "Dana Lopez", "groups": ["Sales"] },
+    { "email": "raj@acme.com",          "name": "Raj Patel",  "groups": ["Engineering"] },
+    { "email": "mei@acme.com",          "name": "Mei Chen",   "groups": ["Legal"] },
+    { "email": "support-lead@acme.com", "name": "Sam Ortiz",  "groups": ["Customer-Support"] }
+  ],
+  "groups": ["Engineering", "Customer-Support", "Sales", "Legal", "Marketing"],
+  "sso": {
+    "configured": true,
+    "enforced": false,
+    "provider": "Okta (SAML)",
+    "users_provisioned": 1140
+  },
+  "usage_by_team": [
+    { "team": "Engineering",      "seats": 320, "monthly_active_users": 290, "weekly_active_users": 251, "queries_last_30d": 14200, "search_success_rate": 0.82 },
+    { "team": "Customer Support", "seats": 180, "monthly_active_users": 170, "weekly_active_users": 158, "queries_last_30d": 20100, "search_success_rate": 0.88 },
+    { "team": "Sales",            "seats": 260, "monthly_active_users": 120, "weekly_active_users": 96,  "queries_last_30d": 4300,  "search_success_rate": 0.71 },
+    { "team": "Legal",            "seats": 60,  "monthly_active_users": 9,   "weekly_active_users": 5,   "queries_last_30d": 110,   "search_success_rate": 0.64 },
+    { "team": "Marketing",        "seats": 140, "monthly_active_users": 88,  "weekly_active_users": 71,  "queries_last_30d": 3600,  "search_success_rate": 0.79 }
+  ],
+  "total_company_mau": 1500,
+  "value_inputs": {
+    "avg_minutes_saved_per_query": 4.5,
+    "loaded_hourly_cost_usd": 65,
+    "support_tickets_deflected_last_30d": 1240,
+    "avg_minutes_per_support_ticket": 20
+  }
+}
